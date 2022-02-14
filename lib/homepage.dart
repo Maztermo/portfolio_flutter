@@ -81,6 +81,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 50),
             const H2(text: "My work"),
             const SizedBox(height: 100),
+            const SizedBox(height: 100),
             ProjectContainer(
               containerWidth: _containerWidth,
               project: Projects.ventyr,
