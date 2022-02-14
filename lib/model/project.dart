@@ -4,6 +4,7 @@ class Project {
   final String author;
   final String forCompany;
   final String timeSpan;
+  final String imageString;
   final bool onAndroid;
   final bool onAppStore;
 
@@ -13,6 +14,7 @@ class Project {
     required this.author,
     required this.forCompany,
     required this.timeSpan,
+    required this.imageString,
     required this.onAndroid,
     required this.onAppStore,
   });

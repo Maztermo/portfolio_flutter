@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_flutter/constant/image_strings.dart';
-import 'package:portfolio_flutter/constant/my_colors.dart';
 import 'package:portfolio_flutter/constant/text_headers.dart';
 
 import 'model/project.dart';
@@ -10,12 +9,10 @@ class ProjectContainer extends StatelessWidget {
     Key? key,
     required this.project,
     required this.containerWidth,
-    required this.imageString,
   }) : super(key: key);
 
   final Project project;
   final double containerWidth;
-  final String imageString;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,7 @@ class ProjectContainer extends StatelessWidget {
       child: Center(
         child: Container(
           width: containerWidth,
-          height: 400,
+          height: 450,
           padding: const EdgeInsets.all(25),
           decoration: BoxDecoration(
             color: Colors.grey.shade100,
@@ -48,7 +45,7 @@ class ProjectContainer extends StatelessWidget {
                       H5(text: project.timeSpan),
                       const Spacer(),
                       const H5(text: "Available on:"),
-                      const Spacer(),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           if (project.onAppStore)
@@ -74,7 +71,7 @@ class ProjectContainer extends StatelessWidget {
               Expanded(
                   child: Center(
                       child: SizedBox(
-                child: Image.asset(imageString),
+                child: Image.asset(project.imageString),
               )))
             ],
           ),

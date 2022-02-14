@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              height: 800,
+              height: _size.height - 100,
               width: double.infinity,
               color: MyColors.darkBlue,
               child: Column(
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   FittedBox(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 100.0),
-                      child: Column(children: [
+                      child: Column(children: const [
                         H3(text: "iOS and Android developer    "),
                         H3(text: "at your service    ")
                       ]),
@@ -78,24 +78,51 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
             const SizedBox(height: 50),
-            const H2(text: "My work"),
-            const SizedBox(height: 100),
-            const SizedBox(height: 100),
-            ProjectContainer(
-              containerWidth: _containerWidth,
-              project: Projects.ventyr,
-              imageString: ImageStrings.ventyrMock,
+
+            SizedBox(
+              width: _size.width * 0.8,
+              child: const H2(
+                  text:
+                      "Hi I'm Martin,\n\nApp developer with 2 years experience designing & building apps for startups.\n\nI believe great app ideas should be put to the test in the hands of end-users as early as possible.\n\nFeel free to contact me for a chat about how we can start building your app today.\n\nMail: something@gmail.com\nPhone: +47 123 45 678"),
             ),
-            ProjectContainer(
-              containerWidth: _containerWidth,
-              project: Projects.anue,
-              imageString: ImageStrings.ventyrMock,
-            ),
-            ProjectContainer(
-              containerWidth: _containerWidth,
-              project: Projects.guezz,
-              imageString: ImageStrings.ventyrMock,
+            const SizedBox(height: 100),
+            SizedBox(
+                width: _size.width * 0.5,
+                child: H3Centered(
+                    text: "Also do have a look at my previous work")),
+            const SizedBox(height: 50),
+            const Icon(Icons.arrow_downward, size: 44, color: Colors.white),
+            const SizedBox(height: 50),
+            ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(60),
+                topRight: Radius.circular(60),
+              ),
+              child: Container(
+                color: Colors.grey.shade100,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 50),
+                    ProjectContainer(
+                      containerWidth: _containerWidth,
+                      project: Projects.ventyr,
+                    ),
+                    const Divider(height: 50),
+                    ProjectContainer(
+                      containerWidth: _containerWidth,
+                      project: Projects.anue,
+                    ),
+                    const Divider(height: 50),
+                    ProjectContainer(
+                      containerWidth: _containerWidth,
+                      project: Projects.guezz,
+                    ),
+                    const Divider(height: 50),
+                  ],
+                ),
+              ),
             ),
 
             //

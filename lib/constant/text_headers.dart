@@ -28,7 +28,7 @@ class H2 extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.left,
-      style: GoogleFonts.barlowCondensed(color: Colors.white, fontSize: 42),
+      style: GoogleFonts.barlowCondensed(color: Colors.white, fontSize: 38),
     );
   }
 }
@@ -42,6 +42,20 @@ class H3 extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.left,
+      style: GoogleFonts.barlowCondensed(color: Colors.white, fontSize: 32),
+    );
+  }
+}
+
+class H3Centered extends StatelessWidget {
+  const H3Centered({Key? key, required this.text}) : super(key: key);
+
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
       style: GoogleFonts.barlowCondensed(color: Colors.white, fontSize: 32),
     );
   }
