@@ -81,9 +81,10 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 50),
 
-            SizedBox(
-              width: _size.width * 0.8,
-              child: const H2(
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 60),
+              width: 1000,
+              child: const H3(
                   text:
                       "Hi I'm Martin,\n\nApp developer with 2 years experience designing & building apps for startups.\n\nI believe great app ideas should be put to the test in the hands of end-users as early as possible.\n\nFeel free to contact me for a chat about how we can start building your app today.\n\nMail: something@gmail.com\nPhone: +47 123 45 678"),
             ),
@@ -92,9 +93,9 @@ class _HomePageState extends State<HomePage> {
                 width: _size.width * 0.5,
                 child: H3Centered(
                     text: "Also do have a look at my previous work")),
-            const SizedBox(height: 50),
+            const SizedBox(height: 20),
             const Icon(Icons.arrow_downward, size: 44, color: Colors.white),
-            const SizedBox(height: 50),
+            const SizedBox(height: 40),
             ClipRRect(
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(60),
@@ -122,6 +123,14 @@ class _HomePageState extends State<HomePage> {
                     const Divider(height: 50),
                   ],
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+              child: Center(
+                child: H5White(
+                    text:
+                        "This website portfolio was developed with Flutter - Thanks for taking a look!"),
               ),
             ),
 

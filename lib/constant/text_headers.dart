@@ -89,6 +89,20 @@ class H5 extends StatelessWidget {
   }
 }
 
+class H5White extends StatelessWidget {
+  const H5White({Key? key, required this.text}) : super(key: key);
+
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: GoogleFonts.barlowCondensed(color: Colors.white, fontSize: 20),
+    );
+  }
+}
+
 class ProjectTitle extends StatelessWidget {
   const ProjectTitle({Key? key, required this.text}) : super(key: key);
 
